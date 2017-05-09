@@ -1,0 +1,233 @@
+/*-----------------------------------------------
+   Base Elements Styles
+-----------------------------------------------*/
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Droid Serif', serif;
+  color:#440040;
+  background-color:#fffcdc;
+  text-align:center;
+}
+
+h1{
+  color:#022A61;
+  font-size:2.2em;
+  font-weight: 800;
+}
+h2,h3{
+  color:#1a529f;
+  font-size:1.5em;
+}
+
+a{
+  text-decoration:none;
+}
+
+p{
+  padding:15px 15px 30px;
+  font-weight:400;
+  font-size: 1.2em;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* ---- Float clearfix ---- */
+.clearfix::after{
+  content:" ";
+  display:table;
+  clear:both;
+}
+
+/* ---- Containers ---- */
+
+.header-container li{
+  background-color:#022a61;
+  border-radius: 25px;
+  margin: .7em .7em;
+}
+
+.header-container{
+  margin: 40px 20px 10px;
+}
+
+.main-nav a{
+  color:#fff;
+  display:block;
+  font-weight:700;
+  font-size:1.2em;
+  letter-spacing: .2em;
+  padding: .7em .7em;
+}
+.main-nav a:hover{
+  color:#fff977;
+}
+/* ---- Portfolio ---- */
+#portfolio{
+  width:100%;
+  background-color: #f1fcfe;
+}
+
+#portfolio h2{
+  text-transform: uppercase;
+  font-weight:900;
+  padding:30px 10px;
+}
+
+#portfolio h3{
+  font-weight:600;
+  font-size:1.4em;
+  letter-spacing: 0.3em;
+}
+
+#portfolio ul{
+  margin:0 auto;
+  width:95%;
+}
+
+/* ---- contact ---- */
+#contact p{
+  color:#000;
+  line-height: 1.2em;
+}
+#contact li{
+  color:#000;
+  font-size: 1.4em;
+  padding-bottom: 25px;
+}
+
+#contact a{
+  color:#1a529f;
+  font-size:1em;
+  font-weight:700;
+}
+/* ---- Footer ---- */
+footer{
+  padding:1em .7em;
+  border-top: 2px solid #d3d3d3;
+}
+
+footer .desktop{
+  display: none;
+}
+
+.footer-name{
+  float:left;
+  font-size:1.5em;
+  color:#1a529f;
+  font-weight:800;
+}
+
+.footer-right{
+  float:right;
+  font-size:1.5em;
+  font-weight: 800;
+}
+
+.footer-right a{
+  color:#1a529f;
+  font-weight:800;
+}
+
+/*-----------------------------------------------
+   Media Queries
+-----------------------------------------------*/
+@media (min-width: 768px){
+  .main-nav li{
+    display: inline-block;
+    font-size: 1.3em;
+    background-color: inherit;
+  }
+
+  .main-nav a{
+    color:#1a529f;
+    font-weight:500;
+  }
+
+  .main-nav a:hover{
+    color:#400000;
+  }
+
+  .profile-img{
+    float:right;
+    padding-left:1.3em;
+    padding-right:1.3em;
+  }
+
+  .portfolio-list li{
+    float:left;
+    width:45%;
+    margin:2%;
+  }
+
+  .portfolio-list li:nth-child(2n+1){
+    clear:both;
+  }
+
+  .contact{
+    margin:3.5em;
+  }
+
+  footer .mobile{
+    display:none;
+  }
+
+  footer .desktop{
+    display:block;
+    padding:0 1em;
+  }
+
+  footer a{
+    padding-left:1em;
+  }
+
+}
+
+@media (min-width: 1024px){
+
+  .header-container{
+    margin-top:0;
+  }
+
+  h1 {
+    margin:35px 0 0 25px;
+  }
+
+  body{
+    max-width: 1400px;
+  }
+
+  .name {
+     float: left;
+  }
+
+  .main-nav{
+     float: right;
+  }
+
+  .portfolio-list ul{
+    padding-right:0;
+  }
+
+  .portfolio-list li{
+    width: 29%;
+  }
+
+  .portfolio-list li:nth-child(3n+1){
+    clear: both;
+  }
+
+  .portfolio-list li:nth-child(2n+1){
+    clear:none;
+  }
+}
